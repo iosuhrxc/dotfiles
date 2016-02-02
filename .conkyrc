@@ -1,0 +1,65 @@
+### Conky configuration file
+
+out_to_x no
+own_window no
+out_to_console yes
+double_buffer no
+background no
+update_interval 1.0
+total_run_times 0
+short_units no
+if_up_strictness address
+use_spacer right
+override_utf8_locale yes
+cpu_avg_samples 8
+pad_percents 2
+use_xft yes
+xftfont Cantarell
+TEXT
+
+[
+    {
+        "full_text": " ${fs_free /home} "
+    },
+    {
+        "full_text": " ${if_up wlp3s0}   ${wireless_essid} ${addr wlp3s0}${endif}${if_up enp4s0f2}   ${addr enp4s0f2}${endif} "
+    },
+    {
+        "full_text": "  ${if_gw}  ${execi 25 curl ipv4.ipogre.com}${endif} "
+    },
+    {
+        "full_text": " ${if_gw}${execi 30 curl ipv6.ipogre.com}${endif} "
+    },
+    {
+        "full_text": " ${if_up wlp3s0}${downspeed wlp3s0}${endif}${if_up enp4s0f2}${downspeed enp4s0f2}${endif}   ${if_up wlp3s0}${upspeed wlp3s0}${endif}${if_up enp4s0f2}${upspeed enp4s0f2}${endif}  "
+    },
+    {
+        "full_text": " ${exec sensors | grep 'Core 0:' | cut -c18-19 | sed '/^$/d' }° "
+    },
+    {
+        "full_text": " ${exec amixer get Master -M | grep -oE -m1 '[[:digit:]]*%'} "
+    },
+    {
+        "full_text": "${if_up tun0} VPN ${endif}",
+        "color": "\#00CC00"
+    },
+    {
+        "full_text": " $kernel "
+    },
+    {
+    	"full_text": " ${uptime_short} "
+    },
+    {
+    	"full_text": "   ${execi 30 acpi | awk '{print $4}' | sed -e 's/,//'} "
+    },
+    {
+        "full_text": " ${time %a %d.%m.%y} ${time %H:%M} ",
+        "color": "\#07CD00"
+    },
+    {
+        "full_text": ""
+    }
+],
+
+
+
