@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /home/binbash/hsmr/dotfiles
+git add ./
+echo 'please enter the comment for your commit:'
+read comment
+git commit -m '$comment'
+git push origin master
