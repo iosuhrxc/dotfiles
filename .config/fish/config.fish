@@ -12,6 +12,10 @@ function europa_universalis_iv
 end
 
 
+function git-this
+	sh /home/binbash/hsmr/dotfiles/git-this
+end
+
 function bounc0r
 	sh /home/binbash/hsmr/bouncer/bouncer-connect
 end
