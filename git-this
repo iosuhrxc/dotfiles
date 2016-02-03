@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/fish
 cd /home/binbash/hsmr/dotfiles
 git add ./
 echo 'please enter a comment for your commit:'
