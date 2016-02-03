@@ -19,19 +19,22 @@ TEXT
 
 [
     {
+        "full_text": "   ${execi 600 yaourt -Qua | wc -l} "
+    },
+    {
         "full_text": " ${fs_free /home} "
     },
     {
         "full_text": " ${if_up wlp3s0}   ${wireless_essid} ${addr wlp3s0}${endif}${if_up enp4s0f2}   ${addr enp4s0f2}${endif} "
     },
     {
-        "full_text": "  ${if_gw}  ${execi 25 curl ipv4.ipogre.com}${endif} "
+        "full_text": " ${if_gw}  ${execi 24 curl ipv4.ipogre.com}${endif} "
     },
     {
-        "full_text": " ${if_gw}${execi 30 curl ipv6.ipogre.com}${endif} "
+        "full_text": " ${if_gw}${execi 26 curl ipv6.ipogre.com}${endif} "
     },
     {
-        "full_text": " ${if_up wlp3s0}${downspeed wlp3s0}${endif}${if_up enp4s0f2}${downspeed enp4s0f2}${endif}   ${if_up wlp3s0}${upspeed wlp3s0}${endif}${if_up enp4s0f2}${upspeed enp4s0f2}${endif}  "
+        "full_text": " ${if_up wlp3s0}${downspeed wlp3s0}${endif}${if_up enp4s0f2}${downspeed enp4s0f2}${endif}   ${if_up wlp3s0}${upspeed wlp3s0}${endif}${if_up enp4s0f2}${upspeed enp4s0f2}${endif}   "
     },
     {
         "full_text": " ${exec sensors | grep 'Core 0:' | cut -c18-19 | sed '/^$/d' }° "
@@ -47,10 +50,10 @@ TEXT
         "full_text": " $kernel "
     },
     {
-    	"full_text": " ${uptime_short} "
+	"full_text": " ${uptime_short} "
     },
     {
-    	"full_text": "   ${execi 30 acpi | awk '{print $4}' | sed -e 's/,//'} "
+	"full_text": "   ${execi 30 acpi | awk '{print $4}' | sed -e 's/,//'} "
     },
     {
         "full_text": " ${time %a %d.%m.%y} ${time %H:%M} ",
