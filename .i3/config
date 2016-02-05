@@ -34,6 +34,8 @@ bindsym $mod+p exec pidgin
 bindsym $mod+l exec sh ~/hsmr/code/lock.sh
 bindsym $mod+c exec telegram
 bindsym $mod+x exec hexchat
+bindsym $mod+s exec subl
+bindsym $mod+i exec sh ~/hsmr/dotfiles/interwebs.sh
 # bindsym F8 exec mpv /home/binbash/audio/awesome.mp3
 # bindsym F9 exec mpv /home/binbash/audio/kuss.mp3
 # bindsym F10 exec killall mpv

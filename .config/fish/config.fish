@@ -7,17 +7,20 @@ function wow
 	optirun wine /mnt/NES/iso/Games/wow/wow/Wow.exe
 end
 
+
 function europa_universalis_iv
 	optirun wine ~/Games/Europa_Universalis_IV/eu4.exe
 end
 
 
-function git-this
-	sh /home/binbash/hsmr/dotfiles/git-this
-end
-
 function bounc0r
 	sh /home/binbash/hsmr/bouncer/bouncer-connect
+end
+
+
+function git-this
+	sh 
+/home/binbash/hsmr/dotfiles/git-this
 end
 
 
@@ -61,7 +64,7 @@ end
 
 
 function mnes
-	sudo mount -t nfs4 192.168.0.19:/pub /mnt/NES
+	sudo mount -t nfs4 192.168.0.17:/pub /mnt/NES
 end
 
 
