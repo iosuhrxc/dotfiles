@@ -64,7 +64,7 @@ end
 
 
 function mnes
-	sudo mount -t nfs4 192.168.0.17:/pub /mnt/NES
+	sudo mount -t nfs4 NES.local:/pub /mnt/NES
 end
 
 
