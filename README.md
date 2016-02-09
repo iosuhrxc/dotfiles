@@ -5,7 +5,7 @@ sophisticated as i can't program or configure stuff in a nice way.
 
 # in detail
 file name         | description
-------------------| -------------
+------------------|--------------
 config.fish       | config file for [fish shell](https://fishshell.com/).
 .i3/config        | config file for [i3 window manager](https://i3wm.org/).
 .conkyrc          | main config file for [conky](https://github.com/brndnmtthws/conky), adapted to produce json, which i can then parse to i3-bar.
