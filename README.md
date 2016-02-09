@@ -12,4 +12,5 @@ randomly switch workspaces on i3 with meta key as modifier.
 
 lock.sh is a simple script to pixelize your screen when locking it.
 
-
+i use macchanger to spoof my macaddress everytime an interface is started.
+to do this on your own machine (linux with systemd needed), copy macspoof@.service to /etc/systemd/system/macspoof@.service and enable it with the needed interfaces, e.g. : sudo systemctl enable macspoof@enp4s0f2.service
